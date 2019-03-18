@@ -15,6 +15,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { reducers, metaReducers } from './shared/store';
 import { AuthEffects } from './shared/store/effects/auth.effect';
+import { VehicleModule } from './vehicle/vehicle.module';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { AuthEffects } from './shared/store/effects/auth.effect';
 
     JobsModule,
     AuthModule,
+    VehicleModule,
     AppRoutingModule,
   ],
   providers: [

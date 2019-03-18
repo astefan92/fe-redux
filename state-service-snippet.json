@@ -1,0 +1,23 @@
+{
+"Define state variable": {
+		"prefix": "svardef",
+		"body": [
+			"private ${1:name}StateItem: StateItem<${2:type}>;",
+			"",
+			"this.${1:name}StateItem = new StateItem(${3:initialValue});",
+			"",
+			"$LINE_COMMENT ${1:name} State Operations",
+			"public get ${1:name}(): ${2:type} {",
+			"\treturn this.${1:name}StateItem.getValue();",
+			"}",
+			"public set ${1:name}(newValue: ${2:type}) {",
+			"\tthis.${1:name}StateItem.setValue(newValue);",
+			"}",
+			"public get ${1:name}Change(): Observable<${2:type}> {",
+			"\treturn this.${1:name}StateItem.getChangeObservable();",
+			"}"
+			
+		  ],						
+		"description": "Define state variable"
+	}
+}

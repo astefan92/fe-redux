@@ -1,0 +1,9 @@
+<div>
+    <div *ngIf="connecting">
+        Connecting...
+    </div>
+    <div *ngIf="!connecting">
+        <button *ngIf="!connected" (click)="connectClick()">Connect To the Vehicle</button>
+        <button *ngIf="connected" (click)="disconnectClick()">Disconnect From the Vehicle</button>
+    </div>
+</div>
